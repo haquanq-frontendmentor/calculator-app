@@ -5,6 +5,6 @@ import svgLoader from "vite-svg-loader";
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [tailwindcss(), vue(), svgLoader()],
+    plugins: [svgLoader(), vue(), tailwindcss()],
     base: "/calculator-app",
 });
