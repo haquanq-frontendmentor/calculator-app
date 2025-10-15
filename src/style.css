@@ -1,0 +1,240 @@
+/* league-spartan-700 - latin */
+@import "tailwindcss";
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    src:
+        url("./assets/fonts/league-spartan-v15-latin-700.woff2") format("woff2"),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            url("./assets/fonts/league-spartan-v15-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@theme inline {
+    --color-*: initial;
+
+    --color-background: var(--token-background-color);
+    --color-foreground: var(--token-text-color);
+    --color-foreground-inset: var(--token-text-color-inset);
+
+    --color-switch-background: var(--token-switch-background-color);
+    --color-switch-thumb-backgroud: var(--token-switch-thumb-background-color);
+
+    --color-calculator-keypad-background: var(--token-calculator-keypad-background-color);
+    --color-calculator-screen-background: var(--token-calculator-screen-background-color);
+
+    --color-button-primary-background: var(--token-button-primary-background-color);
+    --color-button-primary-hover-background: var(--token-button-primary-hover-background-color);
+    --color-button-primary-shadow: var(--token-button-primary-shadow-color);
+    --color-button-primary-text: var(--token-button-primary-text-color);
+
+    --color-button-secondary-background: var(--token-button-secondary-background-color);
+    --color-button-secondary-hover-background: var(--token-button-secondary-hover-background-color);
+    --color-button-secondary-shadow: var(--token-button-secondary-shadow-color);
+    --color-button-secondary-text: var(--token-button-secondary-text-color);
+
+    --color-button-accent-background: var(--token-button-accent-background-color);
+    --color-button-accent-hover-background: var(--token-button-accent-hover-background-color);
+    --color-button-accent-shadow: var(--token-button-accent-shadow-color);
+    --color-button-accent-text: var(--token-button-accent-text-color);
+
+    --font-*: initial;
+    --font-weight-*: initial;
+}
+
+@layer base {
+    :root {
+        /* ### Theme 1 */
+        /* #### Backgrounds */
+        --color-navy-850: hsl(222, 26%, 31%); /*(main background)*/
+        --color-navy-900: hsl(223, 31%, 20%); /*(toggle background, keypad background)*/
+        --color-navy-950: hsl(224, 36%, 15%); /*(screen background)*/
+        /* #### Keys */
+
+        --color-navy-400: hsl(224, 51%, 76%); /* key hover */
+        --color-navy-700: hsl(225, 21%, 49%); /*(key background)*/
+        --color-navy-800: hsl(224, 28%, 35%); /*(key shadow)*/
+        --color-red-400: hsl(6, 93%, 67%); /* key hover */
+        --color-red-600: hsl(6, 63%, 50%); /*(key background, toggle)*/
+        --color-red-800: hsl(6, 70%, 34%); /*(key shadow)*/
+        --color-gray-200: hsl(0, 0%, 90%); /*(key background)*/
+        --color-gray-orange-400: hsl(28, 16%, 65%); /*(key shadow)*/
+        /* #### Text */
+        --color-navy-750: hsl(221, 14%, 31%);
+        --color-white: hsl(0, 100%, 100%);
+
+        /* ### Theme 2 */
+        /* #### Backgrounds */
+        --color-gray-200: hsl(0, 0%, 90%); /*(main background)*/
+        --color-gray-300: hsl(0, 5%, 81%); /*(toggle background, keypad background)*/
+        --color-gray-100: hsl(0, 0%, 93%); /*(screen background)*/
+        /* #### Keys */
+        --color-blue-300: hsl(185, 41%, 56%); /* key hover*/
+        --color-blue-500: hsl(185, 42%, 37%); /*(key background)*/
+        --color-blue-600: hsl(185, 58%, 25%); /*(key shadow)*/
+        --color-orange-500: hsl(25, 100%, 61%); /* key hover*/
+        --color-orange-700: hsl(25, 98%, 40%); /*(key background, toggle)*/
+        --color-orange-800: hsl(25, 99%, 27%); /*(key shadow)*/
+        --color-gray-200: hsl(0, 0%, 90%); /*(key background)*/
+        --color-gray-orange-450: hsl(35, 11%, 61%); /*(key shadow)*/
+        /* #### Text */
+        --color-gray-900: hsl(60, 10%, 19%);
+        --color-white: hsl(0, 100%, 100%); /*text */
+
+        /* ### Theme 3 */
+        /* #### Backgrounds */
+        --color-purple-950: hsl(268, 75%, 9%); /*(main background)*/
+        --color-purple-900: hsl(268, 71%, 12%); /*(toggle background, keypad background, screen background)*/
+        /* #### Keys  */
+        --color-purple-800: hsl(281, 89%, 26%); /*(key background)*/
+        --color-purple-600: hsl(278, 56%, 45%); /* key hover*/
+        --color-purple-400: hsl(285, 91%, 52%); /*(key shadow)*/
+        --color-cyan-500: hsl(176, 100%, 44%); /*(key background, toggle)*/
+        --color-cyan-400: hsl(177, 92%, 70%); /*(key shadow)*/
+        --color-cyan-300: hsl(177, 100%, 79%); /*key hover*/
+        --color-purple-850: hsl(268, 47%, 21%); /*(key background)*/
+        --color-purple-650: hsl(268, 54%, 44%); /* key hover*/
+        --color-purple-750: hsl(290, 70%, 36%); /*(key shadow)*/
+
+        /* #### Text */
+        --color-yellow-300: hsl(52, 100%, 62%);
+        --color-blue-950: hsl(198, 20%, 13%);
+        --color-white: hsl(0, 100%, 100%); /* (text) */
+    }
+
+    :root[data-theme="dark"] {
+        --token-background-color: var(--color-navy-850);
+        --token-text-color: var(--color-white);
+        --token-text-color-inset: var(--color-navy-750);
+
+        --token-switch-background-color: var(--color-navy-900);
+        --token-switch-thumb-background-color: var(--color-red-600);
+
+        --token-calculator-keypad-background-color: var(--color-navy-900);
+        --token-calculator-screen-background-color: var(--color-navy-950);
+
+        --token-button-primary-background-color: var(--color-navy-700);
+        --token-button-primary-hover-background-color: var(--color-navy-400);
+        --token-button-primary-shadow-color: var(--color-navy-800);
+        --token-button-primary-text-color: var(--color-white);
+
+        --token-button-secondary-background-color: var(--color-gray-200);
+        --token-button-secondary-hover-background-color: var(--color-white);
+        --token-button-secondary-shadow-color: var(--color-gray-orange-400);
+        --token-button-secondary-text-color: var(--color-navy-750);
+
+        --token-button-accent-background-color: var(--color-red-600);
+        --token-button-accent-hover-background-color: var(--color-red-400);
+        --token-button-accent-shadow-color: var(--color-red-800);
+        --token-button-accent-text-color: var(--color-white);
+    }
+
+    :root[data-theme="light"] {
+        --token-background-color: var(--color-gray-200);
+        --token-text-color: var(--color-gray-900);
+        --token-text-color-inset: var(--color-white);
+
+        --token-switch-background-color: var(--color-gray-300);
+        --token-switch-thumb-background-color: var(--color-orange-700);
+
+        --token-calculator-keypad-background-color: var(--color-gray-300);
+        --token-calculator-screen-background-color: var(--color-gray-100);
+
+        --token-button-primary-background-color: var(--color-blue-500);
+        --token-button-primary-hover-background-color: var(--color-blue-300);
+        --token-button-primary-shadow-color: var(--color-blue-600);
+        --token-button-primary-text-color: var(--color-white);
+
+        --token-button-secondary-background-color: var(--color-gray-200);
+        --token-button-secondary-hover-background-color: var(--color-white);
+        --token-button-secondary-shadow-color: var(--color-gray-orange-450);
+        --token-button-secondary-text-color: var(--color-gray-900);
+
+        --token-button-accent-background-color: var(--color-orange-700);
+        --token-button-accent-hover-background-color: var(--color-orange-500);
+        --token-button-accent-shadow-color: var(--color-orange-800);
+        --token-button-accent-text-color: var(--color-white);
+    }
+
+    :root[data-theme="purple"] {
+        --token-background-color: var(--color-purple-950);
+        --token-text-color: var(--color-yellow-300);
+        --token-text-color-inset: var(--color-white);
+
+        --token-switch-background-color: var(--color-purple-900);
+        --token-switch-thumb-background-color: var(--color-cyan-500);
+
+        --token-calculator-keypad-background-color: var(--color-purple-900);
+        --token-calculator-screen-background-color: var(--color-purple-900);
+
+        --token-button-primary-background-color: var(--color-purple-800);
+        --token-button-primary-hover-background-color: var(--color-purple-600);
+        --token-button-primary-shadow-color: var(--color-purple-400);
+        --token-button-primary-text-color: var(--color-yellow-300);
+
+        --token-button-secondary-background-color: var(--color-purple-850);
+        --token-button-secondary-hover-background-color: var(--color-purple-650);
+        --token-button-secondary-shadow-color: var(--color-purple-750);
+        --token-button-secondary-text-color: var(--color-yellow-300);
+
+        --token-button-accent-background-color: var(--color-cyan-500);
+        --token-button-accent-hover-background-color: var(--color-cyan-300);
+        --token-button-accent-shadow-color: var(--color-cyan-400);
+        --token-button-accent-text-color: var(--color-blue-950);
+    }
+
+    body {
+        font-family:
+            "League Spartan",
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            "Open Sans",
+            "Helvetica Neue",
+            sans-serif;
+        font-weight: 700;
+        @apply min-h-screen leading-none;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+}
+
+@layer components {
+    .gradient-border {
+        --border-width: 2px;
+        position: relative;
+    }
+    .gradient-border:after {
+        content: "";
+        position: absolute;
+        top: calc(-1 * var(--border-width));
+        left: calc(-1 * var(--border-width));
+        height: calc(100% + var(--border-width) * 2);
+        width: calc(100% + var(--border-width) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: inherit;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+    }
+
+    @keyframes animatedgradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
