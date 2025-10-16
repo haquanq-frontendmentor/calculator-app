@@ -8,10 +8,10 @@ const themeStore = useThemeStore();
 </script>
 
 <template>
-  <header class="text-foreground flex items-center justify-between pt-2 pb-7">
-    <div class="pl-[0.375rem] text-[2rem]" aria-hidden="true">calc</div>
+  <header class="text-foreground flex items-center justify-between pt-2 pr-1 pb-7 pl-[0.375rem]">
+    <div class="text-[2rem]" aria-hidden="true">calc</div>
     <button
-      class="text-foreground relative flex aspect-square w-10 items-center justify-center overflow-hidden rounded-lg transition-[scale] active:scale-[0.97]"
+      class="text-foreground focus-visible:outline-foreground relative flex aspect-square w-10 items-center justify-center overflow-hidden rounded-lg transition-[scale] focus-visible:outline-3 active:scale-[0.97]"
       type="button"
       @click="themeStore.cycleThemes()"
     >
