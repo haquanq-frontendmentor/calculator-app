@@ -1,5 +1,8 @@
 {
   "name": "calculator-app",
+  "description": "Solution for frontendmentor.io challenge: url-shortening-api-landing-page",
+  "author": "haquanq",
+  "license": "MIT",
   "private": true,
   "version": "0.0.0",
   "type": "module",
