@@ -2,6 +2,7 @@
 import bgDark from "./assets/images/bg-dark.jpg";
 import bgLight from "./assets/images/bg-light.jpg";
 import bgPurple from "./assets/images/bg-purple.jpg";
+import Calculator from "./components/Calculator/Calculator.vue";
 import Header from "./components/Header.vue";
 import { useThemeStore } from "./stores/themeStore";
 
@@ -32,6 +33,9 @@ const themeStore = useThemeStore();
     </div>
     <div class="relative z-50 w-[min(100vw-3rem,33.75rem)]">
       <Header />
+      <main>
+        <Calculator />
+      </main>
     </div>
   </div>
 </template>
