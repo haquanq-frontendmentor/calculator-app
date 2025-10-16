@@ -47,7 +47,7 @@ onMounted(() => {
     <div class="gradient-border absolute inset-0 rounded-[0.75rem] opacity-70"></div>
     <div class="bg-calculator-screen-background absolute inset-0 z-20 h-full rounded-[inherit] blur-sm"></div>
     <div
-      class="relative z-50 flex min-h-32 flex-col items-end justify-center gap-2 py-7 pr-[clamp(1.5rem,1.0229rem+2.0356vw,2rem)] pl-[clamp(1.5rem,1.1422rem+1.5267vw,1.875rem)] tracking-tight"
+      class="relative z-50 flex min-h-32 flex-col items-end justify-center gap-2 py-6 pr-[clamp(1.5rem,1.0229rem+2.0356vw,2rem)] pl-[clamp(1.5rem,1.1422rem+1.5267vw,1.875rem)] tracking-tight"
       ref="screen"
     >
       <p class="block min-h-4 min-w-4 shrink-0">{{ calculatorStore.expression }}</p>
