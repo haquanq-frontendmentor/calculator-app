@@ -31,7 +31,7 @@ const themeStore = useThemeStore();
         :class="themeStore.theme == 'dark' && 'opacity-100'"
       />
     </div>
-    <div class="relative z-50 w-[min(100vw-3rem,33.75rem)]">
+    <div class="relative z-50 w-[min(100vw-3rem,33.75rem)] py-16">
       <Header />
       <main>
         <Calculator />
