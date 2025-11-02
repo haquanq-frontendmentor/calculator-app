@@ -1,0 +1,15 @@
+{
+  "name": "Calculator App",
+  "featured": true,
+  "colors:": {
+    "brand": "#1E0934"
+  },
+  "images": {
+    "preview": "https://raw.githubusercontent.com/haquanq-frontendmentor/calculator-app/main/docs/preview.jpg"
+  },
+  "frontendmentor": {
+    "difficulty": "intermediate",
+    "challengeUrl": "https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29",
+    "solutionUrl": "https://www.frontendmentor.io/solutions/interactive-calculator-with-keyboard-navigation-3-themes-t3XCAeHlEY"
+  }
+}
